@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="Black friday da Loja da Bruna. Descontos explosivos.">
+        <title>BLACK FRIDAY LOJA DA BRUNA</title>
+        <link rel="icon" href="assets/favicon.png">
+        <link rel="shortcut icon" href="assets/favicon.png">
+
+        <!-- Fontes Personalizadas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    
+        <!-- Estilo customizado -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    
+    <body>
+   
+        <!-- menu hamburguer -->
+
+        <header>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#produtos">PRODUTOS</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#rodape">CADASTRAR E-MAIL</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- intro -->
+
+        <section class="intro">
+            <h1>BLACK FRIDAY</h1>
+            <h2>UMA EXPLOSÃO DE OFERTAS!</h2>
+            <p>DE 20 A 27 DE NOVEMBRO DESCONTOS DE ATÉ 70%!</p>
+            <p>CADASTRE SEU EMAIL E NÃO PERCA ESSA SUPER LIQUIDAÇÃO!</p>
+            <form  id="newsletter">
+                <input type="text" id="input-email" placeholder="Insira seu email aqui pra não ficar de fora!"><br>
+                <input type="submit" id="btn-cadastrar" value="CADASTRAR">
+            </form>
+            <img src="assets/seta.png" id="seta">
+
+        </section>
+
+        <!-- produtos -->
+
+        <section class="produtos" id="produtos">
+            <h2 class="section__title section__title--produtos">VEJA ALGUMAS PROMOÇÕES!</h2>
+
+            <div class="grid-produtos">
+                <!-- Produto 1 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto01.jpg" alt="Produto 1" class="produto__img">
+                </a>
+                <!-- Produto 2 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto02.jpg" alt="Produto 2" class="produto__img">
+                </a>
+                <!-- Produto 3 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto03.jpg" alt="Produto 3" class="produto__img">
+                </a>
+                <!-- Produto 4 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto04.jpg" alt="Produto 4" class="produto__img">
+                </a>
+                <!-- Produto 5 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto05.jpg" alt="Produto 5" class="produto__img">
+                </a>
+                <!-- Produto 6 -->
+                <a class="produto__item" href="index.html">
+                    <img src="assets/produto06.jpg" alt="Produto 6" class="produto__img">
+                </a>
+
+            </div>
+        </section>
+
+    
+        <!-- rodapé -->
+
+        <footer id="rodape">
+            <h2 class="section__title section__title--produtos cadastre">CADASTRE SEU EMAIL E NÃO PERCA AS PROMOÇÕES!</h2>
+            <form  id="newsletter">
+                <input type="text" id="input-email" placeholder="Insira seu email aqui pra não ficar de fora!"><br>
+                <input type="submit" id="btn-cadastrar" value="CADASTRAR">
+            </form>
+            <p>#1 Desafio #2 Hiring Coders<br>Desenvolvido por Bruna Fachinetti</p>
+        </footer>
+
+        <!-- Script JS -->
+        <script type="text/javascript" src="script.js"></script>
+
+     </body>
+</html>

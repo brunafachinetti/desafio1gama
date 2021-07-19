@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+    --clr-light: #FFFAF0;
+    --clr-dark: #1A1A1D; 
+    --clr-detail: #7e1b63;
+    --clr-transparent: rgba(0, 0, 0, 0.65);
+  
+    --ff-primary: 'Josefin Sans', sans-serif;
+    --ff-secondary: 'Otomanopee One', sans-serif;;
+  
+    --fs-h1: 5rem;
+    --fs-h2: 1.5rem;
+    --fs-body: 1rem;
+}
+
+@font-face {
+    font-family: infected;
+    src: url(assets/INFECTED.ttf);
+ }
+
+@media (min-width: 50em) {
+    :root {
+        --fs-h1: 8rem;
+        --fs-h2: 2rem;
+        --fs-body: 1.2rem;
+    }
+}
+    
+@media (min-width: 75em) {
+    :root {
+        --fs-h1: 10rem;
+        --fs-h2: 3rem;
+        --fs-body: 1.5rem;
+    }
+    
+}
+
+/*********** FORMATACOES GERAIS *************/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	color: var(--clr-light);
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+    text-align: center;
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+h1, h2 {
+    margin: 0px;
+}
+
+p {margin: 10px;}
+  
+h1 {font-size: var(--fs-h1);font-family: 'infected', cursive; transform: rotate(.012turn);color: var(--clr-dark);}  
+h2 {font-size: var(--fs-h2);text-shadow: 1px 2px 3px black;color: var(--clr-light);font-family: var(--ff-secondary); }
+
+img {
+	display: block;
+	max-width: 100%;
+}  
+
+
+/********* MENU HAMBURGUER ********/
+
+.nav {
+	position: fixed;
+    background: var(--clr-dark);
+    opacity: .95;
+	color: var(--clr-light);
+	top: 0;
+	bottom: 0;
+	left: 0;
+    right: 0;
+    line-height: 4em;
+    text-align: center;
+    z-index: 100;
+	transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    border-left: 3px solid purple;
+}
+
+.nav__list {
+	list-style: none;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.nav__link {
+	color: var(--clr-light);
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-h2);
+	text-decoration: none;
+}
+
+.nav__link:hover {
+	color: var(--clr-detail);
+}
+
+.nav-toggle {
+	height: 2em;
+	padding: .5em;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+    position: fixed;
+    top: 1em;
+	right: 1em;
+	z-index: 1000;
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+	position: fixed;
+}
+
+.nav-open .hamburger {
+	transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::after {
+	opacity: 0;
+}
+
+.nav-open .hamburger::before {
+	transform: rotate(90deg) translateX(-8px);
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+	background: var(--clr-light);
+    width: 2em;
+    max-width: 30px;
+	height: 3px;
+    border-radius: 1em;
+    text-shadow: 1px 1px #e7e5e1;
+	transition: transform 250ms ease-in-out;
+}
+
+.hamburger {	
+	display: block;
+	position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	position: absolute;
+	left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 8px; }
+.hamburger::after { bottom: 8px; }
+
+/****************** INTRO *********************/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#input-email {
+    font-family: var(--ff-primary);
+    font-weight: normal;
+    font-size: 12pt;
+    color: var(--clr-light);
+    background-color: rgba(255,255,255,0.7);
+    height: 40px;
+    width: 20rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.6);
+}
+
+#input-email:hover,
+#btn-cadastrar:hover {
+    background-color: var(--clr-detail);
+    border: 0px;
+}
+
+#btn-cadastrar {
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 15pt;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    height: 40px;
+    width: 10rem;
+    border-radius: 20px;
+    border: 0px;
+    cursor: pointer;
+}
+
+#seta {
+    padding-top: 20px;
+    width: 3rem;
+}
+
+/************ PRODUTOS **************/
+
+.grid-produtos {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.produto__item {
+	margin: 1em;
+	overflow: hidden;
+}
+
+.produto__img {
+	transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+				opacity 250ms linear;
+}
+
+.produto__img:hover,
+.produto__item:focus .produto__img {
+	transform: scale(1.2);
+	opacity: .65;
+}
+
+/**************** RODAPE ******************/
+
+footer>p{
+    padding-top: 120px;
+}
+
+.cadastre {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
